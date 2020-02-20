@@ -1,0 +1,50 @@
+<div class="box">
+  <div class="video-box">
+    <h1>{{ userLabel }}</h1>
+    <video
+      id="video"
+      #videoPlayer
+      width="{{ screenWidth }}"
+      height="{{ screenWidth * screenWidthHeightRatio }}"
+    ></video>
+    <div class="button-box">
+      <button class="btn btn-primary" id="record" (click)="getWebCamAccess()">
+        Give access to webcam
+      </button>
+
+      <button
+        class="btn btn-info"
+        (click)="recordUser()"
+        [disabled]="!allowedWebcam"
+      >
+        Record user
+      </button>
+
+      <button
+        class="btn btn-info"
+        (click)="startDetecting()"
+        [disabled]="!allowedWebcam"
+      >
+        Start detecting
+      </button>
+
+      <button
+        class="btn btn-info"
+        (click)="stopFaceApi()"
+        [disabled]="!allowedWebcam"
+      >
+        Stop detecting
+      </button>
+
+      <button
+        class="btn btn-info"
+        (click)="resetFaceApi()"
+        [disabled]="!allowedWebcam"
+      >
+        Reset
+      </button>
+
+      <h3 class="count">Images taken: <span #countTime></span></h3>
+    </div>
+  </div>
+</div>

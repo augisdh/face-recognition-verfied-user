@@ -1,0 +1,33 @@
+.box {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.video-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.button-box > button {
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: antiquewhite;
+  margin: 5px;
+}
+.button-box > button:hover {
+  background-color: bisque;
+}
+
+.button-box > .count {
+  margin: 10px;
+}
